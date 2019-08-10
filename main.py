@@ -12,7 +12,7 @@ client = commands.Bot(command_prefix='#')
 client.remove_command('help')
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Activity(name="(>_):#help", type=discord.ActivityType.playing))
+    await client.change_presence(activity=discord.Activity(name="for help - #help", type=discord.ActivityType.playing))
     print("ok")
 
 
@@ -63,7 +63,7 @@ async def info(ctx, member: discord.Member = None):
         embed = discord.Embed(title=f'Пользователь {user}', description= f'Пользователь ни во что не играет\nС телефона?: {rly}\n Отображаемое имя: {name}\n Самая высокая роль: {role.mention}', color=0xffff00)
         embed.set_footer(text=f'Вызвано: {ctx.message.author}', icon_url=str(ctx.message.author.avatar_url))
     else:
-        embed = discord.Embed(title=f'Пользователь {user}', description= f'Играет в {gameuser} \nС телефона?: {rly}\nОтображаемое имя: {name}\n Самая высокая роль: {role.mention}', color=0xffff00)
+        embed = discord.Embed(title=f'Пользователь {user}', description= f'С телефона?: {rly}\nОтображаемое имя: {name}\n Самая высокая роль: {role.mention}', color=0xffff00)
         embed.set_footer(text=f'Вызвано: {ctx.message.author}', icon_url=str(ctx.message.author.avatar_url))
 
     await ctx.send(embed=embed)
