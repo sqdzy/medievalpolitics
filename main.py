@@ -109,7 +109,7 @@ async def help(ctx, *args):
     await ctx.message.delete()
     embed = discord.Embed(title=f'Помощь по командам', description= f'#avatar - Аватар пользователя(5 сек)\n #help - Это сообщение \n #info - Информация о пользователе \n #random - Рандом(2 сек) \n #say - Отослать сообщение от имени бота(Администрация) \n #trans - Перевести текст(5 сек) \n #f - просто f.. \n#role - Выдача роли(Администратор)\n#call - звонок на сервере(Для включения демонстрации)\n#move (id канала откуда) (id канала куда) (ник игрока(если пусто переместит всех))', color=0xffff00)
     embed.set_footer(text=f'Вызвано: {ctx.message.author} \n Удалится через 30 секунд', icon_url=str(ctx.message.author.avatar_url),)
-    embed.set_image(url='https://cdn.discordapp.com/attachments/606607467719426058/608751400880570372/lvck.png')
+    embed.set_image(url='https://sun9-49.userapi.com/c849520/v849520051/1d8873/WD4UuGoTas8.jpg')
     msg = await ctx.send(embed = embed)
     await asyncio.sleep(30)  # sec
     await msg.delete()
