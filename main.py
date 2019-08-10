@@ -29,7 +29,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     roles = discord.Guild.get_role(role_id=609013471845023785, self = member.guild)
-    await client.get_channel(609358360277549059).send(f"Приветствую тебя на сервере {member.guild.name}, {member.mention}!")
+    await client.get_channel(609358360277549059).send(f"Приветствую тебя на сервере {member.guild.name}, {member.mention}, зайди в канал получения ролей(вход-на-сервер)")
 
 
 @client.event
