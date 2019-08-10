@@ -180,7 +180,7 @@ async def getrole(ctx):
 @client.command()
 @commands.has_permissions(administrator = True)
 async def move(ctx, channel: discord.VoiceChannel = None, channel2: discord.VoiceChannel = None, member: discord.Member = None):
-    ctx.message.delete()
+    await ctx.message.delete()
     if channel == None:
         pass
     if channel2 == None:
