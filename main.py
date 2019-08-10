@@ -178,7 +178,9 @@ async def getrole(ctx):
         await asyncio.sleep(1)
         await msg.delete()
 @client.command()
+@commands.has_permissions(administrator = True)
 async def move(ctx, channel: discord.VoiceChannel = None, channel2: discord.VoiceChannel = None, member: discord.Member = None):
+    ctx.delete()
     if channel == None:
         pass
     if channel2 == None:
