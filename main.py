@@ -51,7 +51,7 @@ async def info(ctx, member: discord.Member = None):
         return
     else:
         mobile = user.is_on_mobile()
-        gameuser = user.activity
+        gameuser = user.activities
         name = user.display_name
         role = user.top_role
 
