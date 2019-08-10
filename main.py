@@ -159,9 +159,7 @@ async def call(ctx):
 async def getrole(ctx):
 
     testrole = discord.utils.get(ctx.author.guild.roles, name="📗Все")
-    em = discord.Embed(title =f"Роль "📗Все" была выдана {ctx.author.name}", color=0xffff00)
-    
-    
+    em = discord.Embed(title =f"Роль 📗Все была выдана {ctx.author.name}", color=0xffff00)
     msg = await ctx.send(embed=em)
     await ctx.message.delete()
     await ctx.author.add_roles(testrole)
