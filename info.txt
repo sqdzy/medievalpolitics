@@ -1,0 +1,3 @@
+token = os.environ.get('BOT_TOKEN')
+client.run(token, bot=True)
+NjA5MDkyNDY1NjAwODg4ODYz.XUySHA.GhSDx2b9hjIHSziEdLefMEv_2E4
