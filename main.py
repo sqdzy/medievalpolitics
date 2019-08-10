@@ -159,24 +159,14 @@ async def call(ctx):
 async def getrole(ctx):
 
     testrole = discord.utils.get(ctx.author.guild.roles, name="📗Все")
-    em = discord.Embed(title =f"Поставь реакцию 📗(green_book), чтобы получить роль {testrole.name}", color=0xffff00)
-    em.set_image(url="https://media.discordapp.net/attachments/520600831058509830/609817001455779850/unknown.png")
-    em.set_image(url="https://cdn.discordapp.com/attachments/520600831058509830/609817290195861525/unknown.png")
-    em.set_footer(text=f"Вызванно {ctx.author.mention}")
+    em = discord.Embed(title =f"Роль "📗Все" была выдана {ctx.author.name}", color=0xffff00)
+    
+    
     msg = await ctx.send(embed=em)
     await ctx.message.delete()
-    def check(reaction, user):
-            return user == ctx.author and str(reaction.emoji) == '📗'
-
-    try:
-        reaction, user = await client.wait_for('reaction_add', timeout=10.0, check=check)
-    except asyncio.TimeoutError:
-        await asyncio.sleep(1)
-        await msg.delete()
-    else:
-        await ctx.author.add_roles(testrole)
-        await asyncio.sleep(1)
-        await msg.delete()
+    await ctx.author.add_roles(testrole)
+    await asyncio.sleep(1)
+    await msg.delete()
 @client.command()
 @commands.has_permissions(administrator = True)
 async def move(ctx, channel: discord.VoiceChannel = None, channel2: discord.VoiceChannel = None, member: discord.Member = None):
